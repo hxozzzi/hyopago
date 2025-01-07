@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+
+    id("com.google.devtools.ksp")//room
 }
 
 android {
@@ -58,4 +60,22 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     implementation ("com.google.mlkit:translate:17.0.3")
+
+    // To recognize Korean script
+    implementation ("com.google.android.gms:play-services-mlkit-text-recognition-korean:16.0.1")
+
+    // room
+    val room_version = "2.6.1"
+
+    implementation("androidx.room:room-runtime:$room_version")
+
+    // If this project uses any Kotlin source, use Kotlin Symbol Processing (KSP)
+    // See Add the KSP plugin to your project
+    ksp("androidx.room:room-compiler:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
+
+    // 의존성 추가
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.7")
+
+
 }
