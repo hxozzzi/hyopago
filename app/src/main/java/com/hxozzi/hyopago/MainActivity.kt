@@ -285,7 +285,7 @@ fun MainScreen() {
                 )
             )
             Text(
-                "孝巴哥",
+                "孝把考",
                 style = TextStyle(
                     fontSize = 15.sp,
                     fontWeight = FontWeight.ExtraLight,
@@ -316,27 +316,7 @@ fun MainScreen() {
                 "즐겨찾기",
                 fontSize = 15.sp
             )
-//            Spacer(modifier = Modifier.width(5.dp))
-//            // 즐겨찾기 버튼
-//            Icon(
-//                imageVector = Icons.Default.Add,
-//                contentDescription = "즐겨찾기",
-//                modifier = Modifier
-//                    .clickable {
-//                        scope.launch(Dispatchers.IO) {
-//                            db
-//                                .saveDataDao()
-//                                .insertAll(
-//                                    SaveData(input = textInput, result = newText)
-//                                )
-//                        }
-//                        Toast
-//                            .makeText(context, "즐겨찾기에 추가되었습니다.", Toast.LENGTH_SHORT)
-//                            .show()
-//                    }
-//            )
         }
-
 
         // 번역창 부분
         Column(
